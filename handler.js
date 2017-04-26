@@ -4,7 +4,7 @@ const ecr = new AWS.ECR({ apiVersion: '2015-09-21' });
 
 module.exports.index = (event, context, callback) => {
   const threshold = process.env.DELETE_THRESHOLD;
-  const removeCount = process.env.DELETE_COUNT;
+  const removeCount = process.env.DELETE_AMOUNT;
   const repositoryName = process.env.REPO_NAME;
 
   console.log(`Processing ${repositoryName} ECR repository...`);
