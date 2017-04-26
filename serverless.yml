@@ -1,0 +1,23 @@
+service: aws-nodejs
+provider:
+  name: aws
+  runtime: nodejs4.3
+  iamRoleStatements:
+   - Effect: "Allow"
+     Action:
+       - "ecr:DescribeImages"
+       - "ecr:ListImages"
+       - "ecr:BatchDeleteImage"
+     Resource: "*"
+package:
+  exclude:
+    - node_modules/**
+functions:
+  purify:
+    handler: handler.index
+    events:
+      - schedule: rate(24 hours)
+    environment:
+      REPO_NAME: quikvideo-test
+      DELETE_THRESHOLD: 20
+      DELETE_AMOUNT: 10
