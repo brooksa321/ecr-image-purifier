@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "description": "Delete 10 oldest images from ECR every 24h",
   "main": "handler.js",
-  "dependencies": {
-    "aws-sdk": "^2.45.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "aws-sdk": "^2.45.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Rafal Wilinski",
   "license": "ISC"
 }

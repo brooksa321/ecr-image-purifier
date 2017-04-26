@@ -1,6 +1,6 @@
 'use strict';
 const AWS = require('aws-sdk');
-const ecr = new AWS.ECR({apiVersion: '2015-09-21'});
+const ecr = new AWS.ECR({ apiVersion: '2015-09-21' });
 
 module.exports.index = (event, context, callback) => {
   const threshold = process.env.DELETE_THRESHOLD;
